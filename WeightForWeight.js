@@ -1,9 +1,9 @@
 function orderWeight(strng) {
    var string = strng.split(' ');
    string.sort(function(a,b){
-    var aSum = getSum(a); 
-    var bSum = getSum(b); 
-     if (aSum === bSum) { y
+    var lSum = getSum(a); 
+    var rSum = getSum(b); 
+     if (rSum === lSum) { 
       if (a < b) {
         return -1; 
       } else {
@@ -11,7 +11,7 @@ function orderWeight(strng) {
       }
  
     } 
-     else if (aSum < bSum) { 
+     else if (lSum < rSum) { 
       
       return -1;
     }
